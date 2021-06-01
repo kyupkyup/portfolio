@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CodePen - Voyage Slider | GSAP</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet'>
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="app">
+
+		<div class="cardList">
+			<button class="cardList__btn btn btn--left">
+				<div class="icon">
+					<svg>
+						<use xlink:href="#arrow-left"></use>
+					</svg>
+				</div>
+			</button>
+
+			<div class="cards__wrapper">
+
+				<a class="card current--card"
+					href="https://drive.google.com/file/d/1fuPuqKWZsmTzdE1Gjii4LYBIRNFswZtn/view?usp=sharing"
+					rel="noreferrer noopener" target="_blank">
+
+					<div class="card__image1">
+						<img src="./images/KakaoTalk_20210104_190020600.jpg" alt="" />
+					</div>
+
+				</a>
+
+				<a href="https://github.com/kyupkyup/kakao-bank" rel="noreferrer noopener" target="_blank" class="card next--card">
+					<div class="card__image">
+						<img src="./images/카뱅 로고.png" alt="" />
+					</div>
+				</a>
+
+
+				<a href="https://github.com/todaysFood" rel="noreferrer noopener" target="_blank" class="card previous--card">
+					<div class="card__image">
+						<img src="./images/오늘의 음식 로고.png" alt="" />
+					</div>
+				</a>
+				<a href="https://github.com/kyupkyup/politics_agora_android" rel="noreferrer noopener" target="_blank" class="card nextnext--card">
+					<div class="card__image">
+						<img src="./images/구글플레이 용 로고.png" alt="" />
+					</div>
+				</a>
+a
+				<a href="https://github.com/kyupkyup/originals-frontend" rel="noreferrer noopener" target="_blank" class="card previousprevious--card">
+					<div class="card__image">
+						<img src="/images/logo5.png" alt="" />
+					</div>
+				</a>
+
+
+
+			</div>
+
+			<button class="cardList__btn btn btn--right">
+				<div class="icon">
+					<svg>
+						<use xlink:href="#arrow-right"></use>
+					</svg>
+				</div>
+			</button>
+		</div>
+
+		<div class="infoList">
+			<div class="info__wrapper">
+				<div class="info current--info">
+					<h1 class="text name">이경엽</h1>
+					<p class="text location">프론트엔드 개발자</p>
+					<p class="text description">이력서</p>
+
+				</div>
+
+				<div class="info next--info">
+					<h1 class="text name">카카오뱅크 웹페이지 컨설팅</h1>
+					<h4 class="text location">라이트 하우스 점수 개선 프로젝트</h4>
+					<p class="text description">html / css / js</p>
+				</div>
+
+				<div class="info previous--info">
+					<h1 class="text name">오늘의 음식</h1>
+					<h4 class="text location">날씨 기반 인근 음식점 추천 웹 사이트</h4>
+					<p class="text description">React / javascript</p>
+				</div>
+
+				<div class="info previousprevious--info">
+					<h1 class="text name">Originals</h1>
+					<h4 class="text location">개발자 커뮤니티 웹 페이지</h4>
+					<p class="text description">React / graphQL</p>
+
+				</div>
+
+				<div class="info nextnext--info">
+					<h1 class="text name">정치판</h1>
+					<h4 class="text location">안드로이드 프로젝트</h4>
+					<p class="text description">kotlin / node.js</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="app__bg">
+			<div class="app__bg__image current--image">
+				<img src="https://source.unsplash.com/Z8dtTatMVMw" alt="" />
+			</div>
+			<div class="app__bg__image next--image">
+				<img src="https://source.unsplash.com/9dmycbFE7mQ" alt="" />
+			</div>
+			<div class="app__bg__image previous--image">
+				<img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+			</div>
+		</div>
+	</div>
+
+	<div class="loading__wrapper">
+		<div class="loader--text">Loading...</div>
+		<div class="loader">
+			<span></span>
+		</div>
+	</div>
+
+
+	<svg class="icons" style="display: none;">
+		<symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+			<polyline points='328 112 184 256 328 400'
+				style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+		</symbol>
+		<symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+			<polyline points='184 112 328 256 184 400'
+				style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+		</symbol>
+	</svg>
+
+	<!-- <div class="support">
+	<a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square"></i></a>
+	<a href="https://dribbble.com/devloop01" target="_blank"><i class="fab fa-dribbble"></i></a>
+</div> -->
+	<!-- partial -->
+	<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
