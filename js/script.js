@@ -147,24 +147,12 @@ function changeInfo(direction) {
       previousInfoEl.classList.add("previousprevious--info");
       nextNextInfoEl.classList.add("next--info");
       previousPreviousInfoEl.classList.add("nextnext--info");
-
-      // currentCardEl.classList.add("previous--card");
-      // previousCardEl.classList.add("previousprevious--card");
-      // previousPreviousCardEl.classList.add("nextnext--card");
-      // nextCardEl.classList.add("current--card");
-      // nextNextCardEl.classList.add("next--card");
     } else if (direction === "left") {
       currentInfoEl.classList.add("next--info");
       nextInfoEl.classList.add("nextnext--info");
       previousInfoEl.classList.add("current--info");
       nextNextInfoEl.classList.add("previousprevious--info");
       previousPreviousInfoEl.classList.add("previous--info");
-
-      // currentCardEl.classList.add("next--card");
-      // previousCardEl.classList.add("current--card");
-      // nextCardEl.classList.add("nextnext--card");
-      // nextNextCardEl.classList.add("previousprevious--card");
-      // previousPreviousCardEl.classList.add("previous--card");
     }
   }
 }
@@ -200,7 +188,7 @@ function resetCardTransforms(e) {
 function initCardEvents() {
   const currentCardEl = cardsContainerEl.querySelector(".current--card");
   currentCardEl.addEventListener("pointermove", updateCard);
-  currentCardEl.addEventListener("pointerout", (e) => {
+  currentCardEl.addEventListener("pointerout", e => {
     resetCardTransforms(e);
   });
 }
@@ -270,8 +258,8 @@ const waitForImages = () => {
     opacity: "0",
   });
 
-  images.forEach((image) => {
-    imagesLoaded(image, (instance) => {
+  images.forEach(image => {
+    imagesLoaded(image, instance => {
       if (instance.isComplete) {
         loadedImages++;
         let loadProgress = loadedImages / totalImages;
