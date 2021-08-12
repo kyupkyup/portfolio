@@ -22,16 +22,6 @@ body {
   overflow: hidden;
 }
 
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-button:focus {
-  outline: none;
-  border: none;
-}
-
 .app {
   position: relative;
   width: 100%;
@@ -103,12 +93,6 @@ button:focus {
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
-}
-.cardList__btn.btn--left {
-  left: -5%;
-}
-.cardList__btn.btn--right {
-  right: -5%;
 }
 .cardList__btn .icon {
   width: 100%;

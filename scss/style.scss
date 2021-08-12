@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
 :root {
   --card-width: 200px;
   --card-height: 300px;
-
   --card-transition-duration: 800ms;
   --card-transition-easing: ease;
 }
@@ -21,16 +20,6 @@ body {
   align-items: center;
   background: rgba(0, 0, 0, 0.787);
   overflow: hidden;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  &:focus {
-    outline: none;
-    border: none;
-  }
 }
 
 .app {
@@ -52,7 +41,7 @@ button {
     overflow: hidden;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
       top: 0;
@@ -67,8 +56,7 @@ button {
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%)
-        translateX(var(--image-translate-offset, 0));
+      transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
       width: 180%;
       height: 180%;
       transition: transform 1000ms ease, opacity 1000ms ease;
@@ -111,13 +99,6 @@ button {
     transform: translateY(-50%);
     z-index: 100;
 
-    &.btn--left {
-      left: -5%;
-    }
-    &.btn--right {
-      right: -5%;
-    }
-
     .icon {
       width: 100%;
       height: 100%;
@@ -133,10 +114,6 @@ button {
     width: 100%;
     height: 100%;
     perspective: 1000px;
-
-    // a {
-    //   cursor: alias;
-    // }
   }
 }
 
@@ -147,17 +124,16 @@ button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) translateX(var(--card-translateX-offset))
-    translateY(var(--card-translateY-offset))
-    rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+    translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset))
+    scale(var(--card-scale-offset));
   display: inline-block;
   width: var(--card-width);
   height: var(--card-height);
-  transition: transform var(--card-transition-duration)
-    var(--card-transition-easing);
+  transition: transform var(--card-transition-duration) var(--card-transition-easing);
   user-select: none;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -165,8 +141,7 @@ button {
     height: 100%;
     background: #000;
     z-index: 1;
-    transition: opacity var(--card-transition-duration)
-      var(--card-transition-easing);
+    transition: opacity var(--card-transition-duration) var(--card-transition-easing);
     opacity: calc(1 - var(--opacity));
   }
   &__image1 {
@@ -268,11 +243,10 @@ button {
   margin-top: calc(var(--card-height)+50);
   margin-left: calc(var(--card-width) / 1.5);
   transform: translateZ(2rem);
-  transition: transform var(--card-transition-duration)
-    var(--card-transition-easing);
+  transition: transform var(--card-transition-duration) var(--card-transition-easing);
   .text {
     position: relative;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
     white-space: nowrap;
     color: #fff;
@@ -348,7 +322,7 @@ button {
   z-index: 200;
   .loader--text {
     color: #fff;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-weight: 500;
     margin-bottom: 1.4rem;
   }
